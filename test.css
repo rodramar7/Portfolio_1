@@ -9,13 +9,13 @@ body{
 .head{
    font-family:'Times New Roman', Times, serif ;
     align-items: center;
-    display: block;               /* FIX: inline-flex → flex */
+    display: block;              
     background-color: #10100f;
     
     box-shadow: 4px 4px 10px 4px #ed0a0ae1;
     margin-top: 20px;
     margin-left: 20px;
-    margin-right: 20px;          /* NOW THIS WILL WORK */
+    margin-right: 20px;         
     padding: 0px;
     transition: 0.3s ease;
     width: auto;
@@ -28,7 +28,6 @@ body{
     box-shadow: 0 8px 20px #c7c51d;
 }
 
-/* Apply hover effect to ALL inner elements */
 .head:hover * {
     color: #10100f !important;
     
@@ -41,13 +40,13 @@ body{
      
 }
 .skills-title{
-    color: #10100f;
+    color: #c7c51d;;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 25px;
     font-size: 30px;
     font-weight: 700;
-    background-color: #c7c51d;
+    background-color: #10100f;
     display:grid;
     width: 60%;
     justify-content: center;
@@ -57,9 +56,13 @@ body{
 .skills-container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 30px;
+    gap: 1px;
     width: 60%;
-    margin: auto;
+    margin: 0 auto;             /* THIS centers the whole container */
+    
+    justify-items: center;       /* centers each skill box inside grid */
+    align-items: center;
+
 
 }
 .skill-bar{
@@ -70,20 +73,23 @@ body{
     border: 22px;
 }
 .skill-box {
-    background: #c7c51d;           /* box color */
+    
+
+    background: #10100f;           /* box color */
     padding: 30px 5px;
     border-radius: 12px;           /* rounded corners */
     text-align: center;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #c7c51d;
     transition: 0.3s ease;         /* smooth hover animation */
-    box-shadow:4px 4px 10px 0 #0cb7e7;
+    box-shadow:4px 4px 10px 0 #0cc6e7;
 }
 .skill-box:hover {
     background: #0de6ea;
     transform: translateY(-5px);
     box-shadow: 0 8px 20px #ed0a0ae1;
+    color: #10100f;
 }
 .obj{
     justify-content: center;
@@ -113,4 +119,36 @@ body{
     transform: translateY(-5px);
     color: #10100f;
     box-shadow: 0 8px 20px #c7c51d;
+}
+/* --- SOCIAL ICONS AREA --- */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 40px 0px 10px 0;
+}
+
+.social-icons .icon img {
+    width: 40px;
+    height: 40px;
+    filter: invert(80%); /* makes light icons on dark bg */
+    transition: 0.3s ease;
+}
+
+/* --- HOVER EFFECT: GLOW --- */
+.social-icons .icon:hover img {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px #00eaff) invert(100%);
+}
+
+/* OPTIONAL: individual color glows */
+.github:hover img {
+    filter: drop-shadow(0 0 10px #ffffff) invert(100%);
+}
+.linkedin:hover img {
+    filter: drop-shadow(0 0 12px #0077b5) invert(100%);
+}
+.email:hover img {
+    filter: drop-shadow(0 0 12px #ff4d4d) invert(100%);
 }
