@@ -39,6 +39,12 @@ body{
     
      
 }
+.skills-section{
+  width: 92%;            /* leaves space on very small screens */
+  max-width: 1100px;
+  margin: 28px auto;     /* center the whole block */
+  padding: 6px 0 30px;
+}
 .skills-title{
     color: #c7c51d;;
     text-align: center;
@@ -54,17 +60,15 @@ body{
     border-radius: 9px;
 }
 .skills-container{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1px;
-    width: 60%;
-    margin: 0 auto;             /* THIS centers the whole container */
-    
-    justify-items: center;       /* centers each skill box inside grid */
-    align-items: center;
-
-
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 18px;
+  align-items: center;
+  justify-items: center;  /* centers boxes inside each grid cell */
 }
+
+
+
 .skill-bar{
     justify-content: center;
     display: flex;
@@ -72,24 +76,28 @@ body{
     
     border: 22px;
 }
-.skill-box {
-    
-
-    background: #10100f;           /* box color */
-    padding: 30px 5px;
-    border-radius: 12px;           /* rounded corners */
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    color: #c7c51d;
-    transition: 0.3s ease;         /* smooth hover animation */
-    box-shadow:4px 4px 10px 0 #0cc6e7;
+.skill-box{
+  width: 100%;
+  max-width: 180px;
+                 /* dark card */
+  color: #d6cf2a;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  padding: 18px 10px;
+  filter: drop-shadow(0 0 10px #ffffffe1) invert(0%);
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 .skill-box:hover {
-    background: #0de6ea;
+      filter: drop-shadow(0 0 10px #ffffffe1) invert(0%);
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px #ed0a0ae1;
-    color: #10100f;
+   
+    color: #ffffff;
+}
+@media (min-width:900px){
+  .skills-container{ grid-template-columns: repeat(4, 1fr); }
+  .skills-title{ font-size:28px; }
+  .skill-box{ font-size:18px; max-width:200px; padding:20px; }
 }
 .obj{
     justify-content: center;
@@ -133,7 +141,8 @@ body{
     width: 40px;
     height: 40px;
     filter: invert(80%); /* makes light icons on dark bg */
-    transition: 0.3s ease;
+    transition: 1s ease;
+    filter: drop-shadow(0 0 10px #ffffffe1) invert(0%);
 }
 
 /* --- HOVER EFFECT: GLOW --- */
