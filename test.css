@@ -162,37 +162,42 @@ body{
 .email:hover img {
     filter: drop-shadow(0 0 12px #ff4d4d) invert(100%);
 }
-/* NAVBAR */
+/* FOOTER */
 .footer-bar {
-  
-    width: 100%;
-    padding: 18px 0;
-    background-color: #10100f;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;   /* centers your name */
-    align-items: center;
-    border-bottom: 3px solid #ea0d0d;
-    box-shadow:0 8px 20px #ff0000;
+    margin-bottom: 0;
+  width: 100%;
+  padding: 18px 0;
+  background-color: #10100f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* subtle 3D glow on top edge to match your theme */
+  border-bottom: 3px solid #ea0d0d;
+  box-shadow: 4px 4px 10px 0  #ed0a0ae1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* NAVBAR NAME */
+/* Footer text */
 .footer-name {
-
-    padding: 15px;
-      margin-left:50px;
-    color: white;
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0;
-     filter: invert(80%); /* makes light icons on dark bg */
-    transition: 1s ease;
-    filter: drop-shadow(0 0 10px #ffffffe1) invert(0%);
+  margin: 0;
+  padding: 6px 12px;
+  color: #f3f0c2;            /* warm off-white / yellowish */
+  font-size: 16px;          /* smaller and appropriate for footer */
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-align: center;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6); /* soft depth */
+  transition: color 0.25s ease, text-shadow 0.25s ease;
 }
-.footer-bar:hover{
-          filter: drop-shadow(0 0 10px #ffffffe1) invert(0%);
-    transform: translateY(-5px);
-   
-    color: #aff30f;
+
+/* hover: lift footer and brighten text (subtle) */
+.footer-bar:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 -12px 28px rgba(255, 0, 0, 0.25);
+}
+
+.footer-bar:hover .footer-name {
+  color:  #c7c51d; /* your bright accent color */
+  text-shadow: 0 6px 20px rgba(175,243,15,0.08);
 }
