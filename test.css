@@ -120,6 +120,7 @@ body{
     font-weight: 600;
     font-family:'Times New Roman', Times, serif ;
      transition: 0.5s ease; 
+     border-bottom: 3px solid #ea0d0d;
 }
 }
 .objective:hover{
@@ -160,4 +161,34 @@ body{
 }
 .email:hover img {
     filter: drop-shadow(0 0 12px #ff4d4d) invert(100%);
+}
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 18px 0;
+    background-color: #10100f;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;   /* centers your name */
+    align-items: center;
+    border-bottom: 3px solid #ea0d0d;
+    box-shadow:0 8px 20px #ff0000;
+}
+
+/* NAVBAR NAME */
+.nav-name {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+     filter: invert(80%); /* makes light icons on dark bg */
+    transition: 1s ease;
+    filter: drop-shadow(0 0 10px #ffffffe1) invert(0%);
+}
+.navbar:hover{
+          filter: drop-shadow(0 0 10px #ffffffe1) invert(0%);
+    transform: translateY(-5px);
+   
+    color: #aff30f;
 }
