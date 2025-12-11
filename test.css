@@ -163,7 +163,7 @@ body{
     filter: drop-shadow(0 0 12px #ff4d4d) invert(100%);
 }
 /* NAVBAR */
-.navbar {
+.footer-bar {
   
     width: 100%;
     padding: 18px 0;
@@ -177,7 +177,7 @@ body{
 }
 
 /* NAVBAR NAME */
-.nav-name {
+.footer-name {
 
     padding: 15px;
       margin-left:50px;
@@ -190,7 +190,7 @@ body{
     transition: 1s ease;
     filter: drop-shadow(0 0 10px #ffffffe1) invert(0%);
 }
-.navbar:hover{
+.footer-bar:hover{
           filter: drop-shadow(0 0 10px #ffffffe1) invert(0%);
     transform: translateY(-5px);
    
